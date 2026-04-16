@@ -22,12 +22,10 @@ const Footer = () => {
 
   return (
     <footer className="relative py-20 border-t border-white/10 overflow-hidden">
-
       {/* 🔥 SOFT BACKGROUND GLOW */}
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-purple-900/5 to-black/40 pointer-events-none" />
 
       <div className="container mx-auto px-6 relative z-10 flex flex-col items-center">
-
         {/* NAME */}
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
@@ -39,8 +37,8 @@ const Footer = () => {
 
         {/* TAGLINE */}
         <p className="text-sm text-gray-400 text-center max-w-md mb-8">
-          Frontend Developer • Flutter Developer • Digital Marketer  
-          Building modern, scalable, and user-friendly applications.
+          Frontend Developer • Flutter Developer • Digital Marketer Building
+          modern, scalable, and user-friendly applications.
         </p>
 
         {/* SOCIAL ICONS */}
@@ -71,7 +69,6 @@ const Footer = () => {
 
         {/* CTA BUTTONS */}
         <div className="flex flex-wrap gap-4 justify-center mb-10">
-          
           {/* HIRE ME */}
           <motion.a
             href="#contact"
@@ -87,8 +84,10 @@ const Footer = () => {
 
           {/* RESUME */}
           <motion.a
-            href="src/assets/BHARATH_CV.pdf"
+            href="/BHARATH_CV.pdf"
             download
+            target="_blank"
+            rel="noopener noreferrer"
             whileHover={{ scale: 1.08 }}
             whileTap={{ scale: 0.95 }}
             className="px-6 py-3 rounded-full text-sm font-semibold border border-white/20 text-white flex items-center gap-2 hover:bg-white/10 transition"
