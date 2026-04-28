@@ -32,8 +32,12 @@ const Counter = ({ target, suffix }: { target: number; suffix: string }) => {
   }, [inView, target]);
 
   return (
-    <span ref={ref} className="font-heading text-4xl md:text-5xl font-bold gradient-text">
-      {count % 1 === 0 ? Math.floor(count) : count}{suffix}
+    <span
+      ref={ref}
+      className="font-heading text-4xl md:text-5xl font-bold gradient-text"
+    >
+      {count % 1 === 0 ? Math.floor(count) : count}
+      {suffix}
     </span>
   );
 };
@@ -55,31 +59,53 @@ const AboutSection = () => {
             About <span className="gradient-text">Me</span>
           </h2>
           <p className="text-muted-foreground font-body max-w-2xl mx-auto">
-            Dynamic Mobile & Web Developer with 5.8+ years of experience in building scalable
-            cross-platform applications using Flutter, React.js, and Firebase.
+            Dynamic Mobile & Web Developer with 5.8+ years of experience in
+            building scalable cross-platform applications using Flutter,
+            React.js, and Firebase.
           </p>
         </motion.div>
 
         <div className="grid md:grid-cols-3 gap-6 mb-16">
           {[
-            { icon: Code2, title: "Clean Architecture", desc: "Repository Pattern & scalable application design" },
-            { icon: Smartphone, title: "Full Lifecycle", desc: "From UI design to deployment & maintenance" },
-            { icon: Globe, title: "Digital Marketing", desc: "SEO, Paid Ads & conversion optimization" },
+            {
+              icon: Code2,
+              title: "Clean Architecture",
+              desc: "Repository Pattern & scalable application design",
+            },
+            {
+              icon: Smartphone,
+              title: "Full Lifecycle",
+              desc: "From UI design to deployment & maintenance",
+            },
+            {
+              icon: Globe,
+              title: "Digital Marketing",
+              desc: "SEO, Paid Ads & conversion optimization",
+            },
           ].map((item, i) => (
             <motion.div
               key={item.title}
               initial={{ opacity: 0, y: 30 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ delay: 0.2 + i * 0.15, duration: 0.5 }}
-              whileHover={{ y: -5, boxShadow: "0 0 40px hsla(250,80%,65%,0.1)" }}
+              whileHover={{
+                y: -5,
+                boxShadow: "0 0 40px hsla(250,80%,65%,0.1)",
+              }}
               className="glass rounded-2xl p-8 text-center group cursor-default"
             >
-              <div className="w-14 h-14 rounded-xl flex items-center justify-center mx-auto mb-4 transition-colors duration-300"
-                style={{ background: "var(--gradient-primary)" }}>
+              <div
+                className="w-14 h-14 rounded-xl flex items-center justify-center mx-auto mb-4 transition-colors duration-300"
+                style={{ background: "var(--gradient-primary)" }}
+              >
                 <item.icon className="text-primary-foreground" size={24} />
               </div>
-              <h3 className="font-heading font-semibold text-lg mb-2 text-foreground">{item.title}</h3>
-              <p className="text-sm text-muted-foreground font-body">{item.desc}</p>
+              <h3 className="font-heading font-semibold text-lg mb-2 text-foreground">
+                {item.title}
+              </h3>
+              <p className="text-sm text-muted-foreground font-body">
+                {item.desc}
+              </p>
             </motion.div>
           ))}
         </div>
@@ -94,7 +120,9 @@ const AboutSection = () => {
               className="text-center"
             >
               <Counter target={stat.value} suffix={stat.suffix} />
-              <p className="text-sm text-muted-foreground font-body mt-2">{stat.label}</p>
+              <p className="text-sm text-muted-foreground font-body mt-2">
+                {stat.label}
+              </p>
             </motion.div>
           ))}
         </div>

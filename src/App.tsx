@@ -24,7 +24,7 @@
 //       </BrowserRouter>
 //     </TooltipProvider>
 //   </QueryClientProvider>
-  
+
 // );
 
 // export default App;

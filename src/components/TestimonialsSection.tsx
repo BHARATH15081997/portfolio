@@ -61,28 +61,48 @@ const TestimonialsSection = () => {
               className="glass rounded-2xl p-8 relative group"
             >
               {/* Hover glow */}
-              <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10 blur-xl" style={{ background: "var(--gradient-primary)", transform: "scale(0.95)" }} />
-              
-              <Quote className="text-primary/20 absolute top-6 right-6" size={36} />
-              
+              <div
+                className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10 blur-xl"
+                style={{
+                  background: "var(--gradient-primary)",
+                  transform: "scale(0.95)",
+                }}
+              />
+
+              <Quote
+                className="text-primary/20 absolute top-6 right-6"
+                size={36}
+              />
+
               {/* Stars */}
               <div className="flex gap-1 mb-4">
                 {Array.from({ length: t.stars }).map((_, si) => (
-                  <Star key={si} size={14} className="text-primary fill-primary" />
+                  <Star
+                    key={si}
+                    size={14}
+                    className="text-primary fill-primary"
+                  />
                 ))}
               </div>
-              
+
               <p className="text-sm text-muted-foreground font-body mb-8 italic leading-relaxed">
                 "{t.text}"
               </p>
-              
+
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-full flex items-center justify-center font-heading font-bold text-sm text-primary-foreground" style={{ background: "var(--gradient-primary)" }}>
+                <div
+                  className="w-10 h-10 rounded-full flex items-center justify-center font-heading font-bold text-sm text-primary-foreground"
+                  style={{ background: "var(--gradient-primary)" }}
+                >
                   {t.name[0]}
                 </div>
                 <div>
-                  <p className="font-heading font-semibold text-foreground text-sm tracking-wide">{t.name}</p>
-                  <p className="text-xs text-muted-foreground font-body">{t.role}</p>
+                  <p className="font-heading font-semibold text-foreground text-sm tracking-wide">
+                    {t.name}
+                  </p>
+                  <p className="text-xs text-muted-foreground font-body">
+                    {t.role}
+                  </p>
                 </div>
               </div>
             </motion.div>

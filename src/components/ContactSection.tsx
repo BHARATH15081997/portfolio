@@ -62,9 +62,24 @@ const ContactSection = () => {
             className="space-y-6"
           >
             {[
-              { icon: Mail, label: "Email", value: "bharathdevfrontend@gmail.com", href: "mailto:bharathdevfrontend@gmail.com" },
-              { icon: Phone, label: "Phone", value: "+91 6379541026", href: "tel:+916379541026" },
-              { icon: MapPin, label: "Location", value: "Chennai, Tamil Nadu", href: undefined },
+              {
+                icon: Mail,
+                label: "Email",
+                value: "bharathdevfrontend@gmail.com",
+                href: "mailto:bharathdevfrontend@gmail.com",
+              },
+              {
+                icon: Phone,
+                label: "Phone",
+                value: "+91 6379541026",
+                href: "tel:+916379541026",
+              },
+              {
+                icon: MapPin,
+                label: "Location",
+                value: "Chennai, Tamil Nadu",
+                href: undefined,
+              },
             ].map((item) => (
               <div key={item.label} className="flex items-center gap-4 group">
                 <motion.div
@@ -75,13 +90,20 @@ const ContactSection = () => {
                   <item.icon className="text-primary-foreground" size={20} />
                 </motion.div>
                 <div>
-                  <p className="text-xs text-muted-foreground font-body">{item.label}</p>
+                  <p className="text-xs text-muted-foreground font-body">
+                    {item.label}
+                  </p>
                   {item.href ? (
-                    <a href={item.href} className="text-sm font-body text-foreground hover:text-primary transition-colors">
+                    <a
+                      href={item.href}
+                      className="text-sm font-body text-foreground hover:text-primary transition-colors"
+                    >
                       {item.value}
                     </a>
                   ) : (
-                    <p className="text-sm font-body text-foreground">{item.value}</p>
+                    <p className="text-sm font-body text-foreground">
+                      {item.value}
+                    </p>
                   )}
                 </div>
               </div>
@@ -92,16 +114,25 @@ const ContactSection = () => {
                 href={whatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                whileHover={{ scale: 1.05, boxShadow: "0 8px 30px -8px hsl(142 70% 45% / 0.4)" }}
+                whileHover={{
+                  scale: 1.05,
+                  boxShadow: "0 8px 30px -8px hsl(142 70% 45% / 0.4)",
+                }}
                 whileTap={{ scale: 0.95 }}
                 className="inline-flex items-center gap-2 px-6 py-3 rounded-full font-heading font-semibold text-sm text-primary-foreground"
-                style={{ background: "linear-gradient(135deg, hsl(142, 70%, 45%), hsl(142, 70%, 35%))" }}
+                style={{
+                  background:
+                    "linear-gradient(135deg, hsl(142, 70%, 45%), hsl(142, 70%, 35%))",
+                }}
               >
                 <MessageCircle size={18} /> WhatsApp
               </motion.a>
               <motion.a
                 href="tel:+919788974178"
-                whileHover={{ scale: 1.05, boxShadow: "0 8px 30px -8px hsl(var(--primary) / 0.4)" }}
+                whileHover={{
+                  scale: 1.05,
+                  boxShadow: "0 8px 30px -8px hsl(var(--primary) / 0.4)",
+                }}
                 whileTap={{ scale: 0.95 }}
                 className="inline-flex items-center gap-2 px-6 py-3 rounded-full font-heading font-semibold text-sm text-primary-foreground"
                 style={{ background: "var(--gradient-primary)" }}
@@ -125,10 +156,16 @@ const ContactSection = () => {
                   type={field === "email" ? "email" : "text"}
                   placeholder={field === "name" ? "Your Name" : "Your Email"}
                   value={form[field]}
-                  onChange={(e) => setForm({ ...form, [field]: e.target.value })}
+                  onChange={(e) =>
+                    setForm({ ...form, [field]: e.target.value })
+                  }
                   className="w-full glass rounded-xl px-5 py-3.5 text-sm font-body text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all"
                 />
-                {errors[field] && <p className="text-xs text-destructive mt-1 font-body">{errors[field]}</p>}
+                {errors[field] && (
+                  <p className="text-xs text-destructive mt-1 font-body">
+                    {errors[field]}
+                  </p>
+                )}
               </div>
             ))}
             <div>
@@ -139,17 +176,30 @@ const ContactSection = () => {
                 onChange={(e) => setForm({ ...form, message: e.target.value })}
                 className="w-full glass rounded-xl px-5 py-3.5 text-sm font-body text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all resize-none"
               />
-              {errors.message && <p className="text-xs text-destructive mt-1 font-body">{errors.message}</p>}
+              {errors.message && (
+                <p className="text-xs text-destructive mt-1 font-body">
+                  {errors.message}
+                </p>
+              )}
             </div>
 
             <motion.button
               type="submit"
-              whileHover={{ scale: 1.03, boxShadow: "0 8px 30px -8px hsl(var(--primary) / 0.5)" }}
+              whileHover={{
+                scale: 1.03,
+                boxShadow: "0 8px 30px -8px hsl(var(--primary) / 0.5)",
+              }}
               whileTap={{ scale: 0.97 }}
               className="w-full py-4 rounded-xl font-heading font-semibold text-primary-foreground flex items-center justify-center gap-2"
               style={{ background: "var(--gradient-primary)" }}
             >
-              {submitted ? "Message Sent! ✓" : <><Send size={18} /> Send Message</>}
+              {submitted ? (
+                "Message Sent! ✓"
+              ) : (
+                <>
+                  <Send size={18} /> Send Message
+                </>
+              )}
             </motion.button>
           </motion.form>
         </div>

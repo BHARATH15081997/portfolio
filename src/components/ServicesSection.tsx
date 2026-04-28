@@ -3,11 +3,31 @@ import { useRef } from "react";
 import { Globe, Smartphone, Palette, Search, BarChart3 } from "lucide-react";
 
 const services = [
-  { icon: Globe, title: "Web Development", desc: "Modern, responsive web applications with React.js and cutting-edge technologies." },
-  { icon: Smartphone, title: "Mobile App Development", desc: "Cross-platform mobile apps with Flutter for iOS and Android." },
-  { icon: Palette, title: "UI/UX Design", desc: "Beautiful, intuitive interfaces designed in Figma with user-centered approach." },
-  { icon: Search, title: "Digital Marketing & SEO", desc: "Search engine optimization, content strategy, and organic growth." },
-  { icon: BarChart3, title: "Paid Ads Campaigns", desc: "Google Ads, Meta Ads (Facebook, Instagram, WhatsApp) campaign management." },
+  {
+    icon: Globe,
+    title: "Web Development",
+    desc: "Modern, responsive web applications with React.js and cutting-edge technologies.",
+  },
+  {
+    icon: Smartphone,
+    title: "Mobile App Development",
+    desc: "Cross-platform mobile apps with Flutter for iOS and Android.",
+  },
+  {
+    icon: Palette,
+    title: "UI/UX Design",
+    desc: "Beautiful, intuitive interfaces designed in Figma with user-centered approach.",
+  },
+  {
+    icon: Search,
+    title: "Digital Marketing & SEO",
+    desc: "Search engine optimization, content strategy, and organic growth.",
+  },
+  {
+    icon: BarChart3,
+    title: "Paid Ads Campaigns",
+    desc: "Google Ads, Meta Ads (Facebook, Instagram, WhatsApp) campaign management.",
+  },
 ];
 
 const ServicesSection = () => {
@@ -38,7 +58,10 @@ const ServicesSection = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ delay: i * 0.1, duration: 0.5 }}
-              whileHover={{ y: -8, boxShadow: "0 0 50px hsla(250,80%,65%,0.12)" }}
+              whileHover={{
+                y: -8,
+                boxShadow: "0 0 50px hsla(250,80%,65%,0.12)",
+              }}
               className="glass rounded-2xl p-8 text-center group cursor-default"
             >
               <motion.div
@@ -48,8 +71,12 @@ const ServicesSection = () => {
               >
                 <service.icon className="text-primary-foreground" size={24} />
               </motion.div>
-              <h3 className="font-heading font-semibold text-lg mb-3 text-foreground">{service.title}</h3>
-              <p className="text-sm text-muted-foreground font-body">{service.desc}</p>
+              <h3 className="font-heading font-semibold text-lg mb-3 text-foreground">
+                {service.title}
+              </h3>
+              <p className="text-sm text-muted-foreground font-body">
+                {service.desc}
+              </p>
             </motion.div>
           ))}
         </div>

@@ -1,19 +1,32 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import {
-  Code, Smartphone, Cloud, Wrench, Megaphone,
-} from "lucide-react";
+import { Code, Smartphone, Cloud, Wrench, Megaphone } from "lucide-react";
 
 const categories = [
   {
     icon: Code,
     title: "Frontend",
-    skills: ["HTML", "CSS", "JavaScript","TypeScript", "React.js", "Bootstrap", "Material UI"],
+    skills: [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "TypeScript",
+      "React.js",
+      "Bootstrap",
+      "Material UI",
+    ],
   },
   {
     icon: Smartphone,
     title: "Mobile Development",
-    skills: ["Flutter", "Dart" ,"Firebase", "Google Maps API","Bloc Pattern", "Provider"],
+    skills: [
+      "Flutter",
+      "Dart",
+      "Firebase",
+      "Google Maps API",
+      "Bloc Pattern",
+      "Provider",
+    ],
   },
   {
     icon: Cloud,
@@ -28,7 +41,13 @@ const categories = [
   {
     icon: Megaphone,
     title: "Digital Marketing",
-    skills: ["SEO", "Email Marketing", "Social Media", "Google Ads", "Meta Ads"],
+    skills: [
+      "SEO",
+      "Email Marketing",
+      "Social Media",
+      "Google Ads",
+      "Meta Ads",
+    ],
   },
 ];
 
@@ -70,7 +89,9 @@ const SkillsSection = () => {
                 >
                   <cat.icon className="text-primary-foreground" size={18} />
                 </div>
-                <h3 className="font-heading font-semibold text-foreground">{cat.title}</h3>
+                <h3 className="font-heading font-semibold text-foreground">
+                  {cat.title}
+                </h3>
               </div>
               <div className="flex flex-wrap gap-2">
                 {cat.skills.map((skill) => (

@@ -68,7 +68,10 @@ const Navbar = () => {
         </div>
 
         {/* Mobile toggle */}
-        <button className="md:hidden text-foreground" onClick={() => setMobileOpen(!mobileOpen)}>
+        <button
+          className="md:hidden text-foreground"
+          onClick={() => setMobileOpen(!mobileOpen)}
+        >
           {mobileOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
       </div>
@@ -98,56 +101,56 @@ const Navbar = () => {
       </AnimatePresence> */}
 
       {/* Mobile menu */}
-<AnimatePresence>
-  {mobileOpen && (
-    <>
-      {/* BACKDROP */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 0.6 }}
-        exit={{ opacity: 0 }}
-        className="fixed inset-0 bg-black z-40"
-        onClick={() => setMobileOpen(false)}
-      />
+      <AnimatePresence>
+        {mobileOpen && (
+          <>
+            {/* BACKDROP */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 0.6 }}
+              exit={{ opacity: 0 }}
+              className="fixed inset-0 bg-black z-40"
+              onClick={() => setMobileOpen(false)}
+            />
 
-      {/* DRAWER */}
-      <motion.div
-        initial={{ x: "100%" }}
-        animate={{ x: 0 }}
-        exit={{ x: "100%" }}
-        transition={{ type: "spring", stiffness: 260, damping: 25 }}
-        className="fixed top-0 right-0 h-full w-[80%] max-w-sm bg-black/90 backdrop-blur-xl z-50 shadow-2xl"
-      >
-        <div className="flex items-center justify-between p-5 border-b border-white/10">
-          <h2 className="text-lg font-bold gradient-text">Bharath P</h2>
-          <button onClick={() => setMobileOpen(false)}>
-            <X size={24} />
-          </button>
-        </div>
-
-        <div className="flex flex-col p-6 gap-6">
-          {navLinks.map((link) => (
-            <button
-              key={link.href}
-              onClick={() => handleClick(link.href)}
-              className="text-lg text-left text-muted-foreground hover:text-foreground transition-all"
+            {/* DRAWER */}
+            <motion.div
+              initial={{ x: "100%" }}
+              animate={{ x: 0 }}
+              exit={{ x: "100%" }}
+              transition={{ type: "spring", stiffness: 260, damping: 25 }}
+              className="fixed top-0 right-0 h-full w-[80%] max-w-sm bg-black/90 backdrop-blur-xl z-50 shadow-2xl"
             >
-              {link.label}
-            </button>
-          ))}
+              <div className="flex items-center justify-between p-5 border-b border-white/10">
+                <h2 className="text-lg font-bold gradient-text">Bharath P</h2>
+                <button onClick={() => setMobileOpen(false)}>
+                  <X size={24} />
+                </button>
+              </div>
 
-          <button
-            onClick={() => handleClick("#contact")}
-            className="mt-4 px-5 py-3 rounded-full text-white font-medium"
-            style={{ background: "var(--gradient-primary)" }}
-          >
-            Hire Me
-          </button>
-        </div>
-      </motion.div>
-    </>
-  )}
-</AnimatePresence>
+              <div className="flex flex-col p-6 gap-6">
+                {navLinks.map((link) => (
+                  <button
+                    key={link.href}
+                    onClick={() => handleClick(link.href)}
+                    className="text-lg text-left text-muted-foreground hover:text-foreground transition-all"
+                  >
+                    {link.label}
+                  </button>
+                ))}
+
+                <button
+                  onClick={() => handleClick("#contact")}
+                  className="mt-4 px-5 py-3 rounded-full text-white font-medium"
+                  style={{ background: "var(--gradient-primary)" }}
+                >
+                  Hire Me
+                </button>
+              </div>
+            </motion.div>
+          </>
+        )}
+      </AnimatePresence>
     </motion.nav>
   );
 };
