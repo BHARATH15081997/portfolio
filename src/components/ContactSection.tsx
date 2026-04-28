@@ -33,7 +33,8 @@ const ContactSection = () => {
     setForm({ name: "", email: "", message: "" });
   };
 
-  const whatsappUrl = `https://wa.me/916379541026?text=${encodeURIComponent("Hi Bharath, I'd like to discuss a project.")}`;
+  // const whatsappUrl = `https://wa.me/916379541026?text=${encodeURIComponent("Hi Bharath, I'd like to discuss a project.")}`;
+  const whatsappUrl = `https://wa.me/919788974178?text=${encodeURIComponent("Hi Bharath, I'd like to discuss a project.")}`;
 
   return (
     <section id="contact" className="py-24 md:py-32 relative">
@@ -99,7 +100,7 @@ const ContactSection = () => {
                 <MessageCircle size={18} /> WhatsApp
               </motion.a>
               <motion.a
-                href="tel:+916379541026"
+                href="tel:+919788974178"
                 whileHover={{ scale: 1.05, boxShadow: "0 8px 30px -8px hsl(var(--primary) / 0.4)" }}
                 whileTap={{ scale: 0.95 }}
                 className="inline-flex items-center gap-2 px-6 py-3 rounded-full font-heading font-semibold text-sm text-primary-foreground"

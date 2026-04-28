@@ -94,11 +94,11 @@ const MobileIcon = ({ className, size }: { className?: string; size?: number }) 
   </svg>
 );
 
-// 2. Updated Data with KMU TechGrid Solutions
+// 2. Updated Data with Bizturn Technologies
 const experienceData = [
   {
     role: "Flutter & Mobile Developer",
-    company: "KMU TechGrid Solutions",
+    company: "Bizturn Technologies",
     period: "2023 – Present",
     description: "Leading mobile innovation by architecting scalable Flutter ecosystems integrated with Firebase.",
     responsibilities: [
@@ -112,7 +112,7 @@ const experienceData = [
   },
   {
     role: "Frontend & Web Developer",
-    company: "KMU TechGrid Solutions",
+    company: "Bizturn Technologies",
     period: "2021 – 2023",
     description: "Advanced into modern JavaScript development, focusing on React.js and high-performance web apps.",
     responsibilities: [
@@ -126,7 +126,8 @@ const experienceData = [
   },
   {
     role: "WordPress Developer & SEO Specialist",
-    company: "KMU TechGrid Solutions",
+    company: "Bizturn Technologies",
+    
     period: "2020 – 2021",
     description: "Started the career journey optimizing web presence and technical SEO for diverse clients.",
     responsibilities: [
@@ -157,7 +158,7 @@ const ExperienceSection = () => {
             Career <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-cyan-400">Journey</span>
           </h2>
           <p className="text-gray-400 font-light max-w-xl mx-auto italic">
-            Growing and evolving within <span className="text-white font-medium">KMU TechGrid Solutions</span>
+            Growing and evolving within <span className="text-white font-medium">Bizturn Technologies</span>
           </p>
         </motion.div>
 
