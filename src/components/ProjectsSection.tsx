@@ -75,7 +75,7 @@ const projects = [
     features: ["Charts", "Users", "Roles"],
     tech: ["React", "MUI"],
     image: projectAdmin,
-    website: "https://inspire-762dd.web.app/",
+    website: "https://admin-inspire.web.app",
   },
   {
     icon: MapPin,
