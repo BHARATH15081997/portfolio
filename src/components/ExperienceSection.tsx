@@ -32,7 +32,7 @@ const experienceData = [
   {
     role: "Flutter & Mobile Developer",
     company: "Bizturn Technologies",
-    period: "2023 – Present",
+    period: "2023 – 2026",
     description:
       "Leading mobile innovation by architecting scalable Flutter ecosystems integrated with Firebase.",
     responsibilities: [
@@ -138,9 +138,10 @@ const TimelineItem = ({ exp, index }: any) => {
         className="w-full md:w-[45%] pl-8 md:pl-0"
       >
         <div className="p-8 rounded-3xl bg-white/5 border border-white/10 backdrop-blur-xl hover:border-white/20 transition">
-
           {/* PERIOD */}
-          <div className={`mb-4 text-xs font-bold px-3 py-1 rounded-full inline-block bg-gradient-to-r ${exp.color}`}>
+          <div
+            className={`mb-4 text-xs font-bold px-3 py-1 rounded-full inline-block bg-gradient-to-r ${exp.color}`}
+          >
             {exp.period}
           </div>
 
@@ -172,7 +173,9 @@ const TimelineItem = ({ exp, index }: any) => {
           <ul className="space-y-2">
             {exp.responsibilities.map((r: string, i: number) => (
               <li key={i} className="text-xs text-gray-300 flex gap-2">
-                <span className={`w-2 h-2 mt-1 rounded-full bg-gradient-to-r ${exp.color}`} />
+                <span
+                  className={`w-2 h-2 mt-1 rounded-full bg-gradient-to-r ${exp.color}`}
+                />
                 {r}
               </li>
             ))}

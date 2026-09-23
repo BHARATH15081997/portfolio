@@ -27,6 +27,18 @@ const testimonials = [
     text: "Bharath's digital marketing strategies transformed our ad campaigns. We saw a 4x return on ad spend within the first quarter.",
     stars: 5,
   },
+  {
+    name: "Aadhirai",
+    role: "Owner, Cake Kadai",
+    text: "Bharath's website development skills are top-notch. The website is user-friendly, and our sales have increased by 50% since its launch.",
+    stars: 5,
+  },
+  {
+    name: "Gokul",
+    role: "Owner, Sri pachaiamman Wood carving",
+    text: "Web Weave Studios craftsmanship and attention to detail are unmatched. The wooden sculptures he created for our business are truly exceptional.",
+    stars: 5,
+  }
 ];
 
 const TestimonialsSection = () => {

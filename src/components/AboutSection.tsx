@@ -3,9 +3,9 @@ import { useRef, useEffect, useState } from "react";
 import { Code2, Globe, Smartphone } from "lucide-react";
 
 const stats = [
-  { label: "Years Experience", value: 5.8, suffix: "+" },
-  { label: "Websites Delivered", value: 10, suffix: "+" },
-  { label: "Mobile Apps Published", value: 3, suffix: "+" },
+  { label: "Years Experience", value: 6, suffix: "+" },
+  { label: "Websites Delivered & Mobile Apps Published", value: 20, suffix: "+" },
+  { label: "Full Digital Marketing Campaigns", value: 3, suffix: "+" },
 ];
 
 const Counter = ({ target, suffix }: { target: number; suffix: string }) => {
@@ -59,7 +59,7 @@ const AboutSection = () => {
             About <span className="gradient-text">Me</span>
           </h2>
           <p className="text-muted-foreground font-body max-w-2xl mx-auto">
-            Dynamic Mobile & Web Developer with 5.8+ years of experience in
+            Dynamic Mobile & Web Developer with 6+ years of experience in
             building scalable cross-platform applications using Flutter,
             React.js, and Firebase.
           </p>

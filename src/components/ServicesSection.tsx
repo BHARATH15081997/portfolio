@@ -1,6 +1,6 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import { Globe, Smartphone, Palette, Search, BarChart3 } from "lucide-react";
+import { Globe, Smartphone, Palette, Search, BarChart3, Megaphone } from "lucide-react";
 
 const services = [
   {
@@ -24,10 +24,20 @@ const services = [
     desc: "Search engine optimization, content strategy, and organic growth.",
   },
   {
-    icon: BarChart3,
+    icon: Megaphone,
     title: "Paid Ads Campaigns",
     desc: "Google Ads, Meta Ads (Facebook, Instagram, WhatsApp) campaign management.",
   },
+  {
+    icon: BarChart3,
+    title: "Business Strategy & Consulting",
+    desc: "Tailored strategies to drive growth and improve operational efficiency.",
+  },
+  {
+    icon: Globe,
+    title: "Backend & Cloud Solutions",
+    desc: "Scalable backend architecture and cloud infrastructure design.",
+  }
 ];
 
 const ServicesSection = () => {

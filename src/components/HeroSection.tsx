@@ -197,7 +197,7 @@ const HeroSection = () => {
                       Experience
                     </p>
                     <p className="text-sm text-white font-bold italic">
-                      5.8+ Years
+                      6 +Years
                     </p>
                   </div>
                 </div>

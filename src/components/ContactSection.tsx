@@ -71,8 +71,8 @@ const ContactSection = () => {
               {
                 icon: Phone,
                 label: "Phone",
-                value: "+91 6379541026",
-                href: "tel:+916379541026",
+                value: "+91 9788974178",
+                href: "tel:+919788974178",
               },
               {
                 icon: MapPin,
@@ -80,6 +80,7 @@ const ContactSection = () => {
                 value: "Chennai, Tamil Nadu",
                 href: undefined,
               },
+              
             ].map((item) => (
               <div key={item.label} className="flex items-center gap-4 group">
                 <motion.div

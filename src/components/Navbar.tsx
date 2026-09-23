@@ -41,7 +41,7 @@ const Navbar = () => {
           className="font-heading text-xl font-bold gradient-text"
           whileHover={{ scale: 1.05 }}
         >
-          Bharath P
+          Web Weave Studio
         </motion.a>
 
         {/* Desktop */}
@@ -75,31 +75,6 @@ const Navbar = () => {
           {mobileOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
       </div>
-
-      {/* Mobile menu */}
-      {/* <AnimatePresence>
-        {mobileOpen && (
-          <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: "auto" }}
-            exit={{ opacity: 0, height: 0 }}
-            className="md:hidden glass mt-2 mx-4 rounded-xl overflow-hidden"
-          >
-            <div className="flex flex-col p-4 gap-3">
-              {navLinks.map((link) => (
-                <button
-                  key={link.href}
-                  onClick={() => handleClick(link.href)}
-                  className="text-sm font-body text-muted-foreground hover:text-foreground py-2 text-left transition-colors"
-                >
-                  {link.label}
-                </button>
-              ))}
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence> */}
-
       {/* Mobile menu */}
       <AnimatePresence>
         {mobileOpen && (
